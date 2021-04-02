@@ -508,6 +508,11 @@ EVENTS: Dict[int, Dict[str, Union[Alert, Callable[[Any, messaging.SubMaster, boo
       "",
       AlertStatus.userPrompt, AlertSize.small,
       Priority.LOWEST, VisualAlert.none, AudibleAlert.none, 0., 0., .2),
+    ET.PERMANENT: Alert(
+      "Don't Worry About It..",
+      "",
+      AlertStatus.userPrompt, AlertSize.small,
+      Priority.LOWEST, VisualAlert.none, AudibleAlert.none, 0., 0., .2),
     # ET.USER_DISABLE: EngagementAlert(AudibleAlert.chimeDisengage),
     # ET.NO_ENTRY: NoEntryAlert("Pedal Pressed During Attempt",
     #                           visual_alert=VisualAlert.brakePressed),
@@ -602,11 +607,21 @@ EVENTS: Dict[int, Dict[str, Union[Alert, Callable[[Any, messaging.SubMaster, boo
       "",
       AlertStatus.userPrompt, AlertSize.small,
       Priority.LOWEST, VisualAlert.none, AudibleAlert.none, 0., 0., .2),
+    ET.PERMANENT: Alert(
+      "Don't Worry About It..",
+      "",
+      AlertStatus.userPrompt, AlertSize.small,
+      Priority.LOWEST, VisualAlert.none, AudibleAlert.none, 0., 0., .2),
     # ET.SOFT_DISABLE: SoftDisableAlert("Door Open"),
     # ET.NO_ENTRY: NoEntryAlert("Door Open"),
   },
 
   EventName.seatbeltNotLatched: {
+    ET.PERMANENT: Alert(
+      "Don't Worry About It..",
+      "",
+      AlertStatus.userPrompt, AlertSize.small,
+      Priority.LOWEST, VisualAlert.none, AudibleAlert.none, 0., 0., .2),
     ET.PERMANENT: Alert(
       "Don't Worry About It..",
       "",
