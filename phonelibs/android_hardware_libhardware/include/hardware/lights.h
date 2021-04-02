@@ -80,14 +80,14 @@ __BEGIN_DECLS
 /**
  * Light brightness is managed by a user setting.
  */
-// #define BRIGHTNESS_MODE_USER        0
-#define BRIGHTNESS_MODE_USER        1
+#define BRIGHTNESS_MODE_USER        0
+// #define BRIGHTNESS_MODE_USER        1
 
 /**
  * Light brightness is managed by a light sensor.
  */
-// #define BRIGHTNESS_MODE_SENSOR      1
-#define BRIGHTNESS_MODE_SENSOR      0
+#define BRIGHTNESS_MODE_SENSOR      1
+// #define BRIGHTNESS_MODE_SENSOR      0
 
 /**
  * Light mode allows multiple LEDs

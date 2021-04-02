@@ -13,8 +13,8 @@
 #include <GLES2/gl2.h>
 #include <EGL/eglext.h>
 
-// #define BACKLIGHT_LEVEL 205
-#define BACKLIGHT_LEVEL 250
+#define BACKLIGHT_LEVEL 205
+// #define BACKLIGHT_LEVEL 250
 
 using namespace android;
 

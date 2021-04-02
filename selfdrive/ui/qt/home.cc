@@ -260,6 +260,7 @@ void GLWindow::initializeGL() {
 
 void GLWindow::backlightUpdate() {
   // Update brightness
+  // float clipped_brightness = std::min(100.0f, (ui_state.scene.light_sensor * brightness_m) + brightness_b);
   float clipped_brightness = std::min(100.0f, (ui_state.scene.light_sensor * brightness_m) + brightness_b);
   if (!ui_state.scene.started) {
     clipped_brightness = BACKLIGHT_OFFROAD;
