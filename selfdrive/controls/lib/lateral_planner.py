@@ -109,14 +109,14 @@ class LateralPlanner():
       self.lane_change_state = LaneChangeState.off
       self.lane_change_direction = LaneChangeDirection.none
     else:
-      # torque_applied = sm['carState'].steeringPressed and \
-      #                  ((sm['carState'].steeringTorque > 0 and self.lane_change_direction == LaneChangeDirection.left) or
-      #                   (sm['carState'].steeringTorque < 0 and self.lane_change_direction == LaneChangeDirection.right))
+      torque_applied = sm['carState'].steeringPressed and \
+                       ((sm['carState'].steeringTorque > 0 and self.lane_change_direction == LaneChangeDirection.left) or
+                        (sm['carState'].steeringTorque < 0 and self.lane_change_direction == LaneChangeDirection.right))
 
       # FIXME: set >=, <= or just set True??
-      torque_applied = sm['carState'].steeringPressed and \
-                       ((sm['carState'].steeringTorque >= 0 and self.lane_change_direction == LaneChangeDirection.left) or
-                        (sm['carState'].steeringTorque <= 0 and self.lane_change_direction == LaneChangeDirection.right))
+      # torque_applied = sm['carState'].steeringPressed and \
+      #                  ((sm['carState'].steeringTorque >= 0 and self.lane_change_direction == LaneChangeDirection.left) or
+      #                   (sm['carState'].steeringTorque <= 0 and self.lane_change_direction == LaneChangeDirection.right))
       # torque_applied = ((sm['carState'].steeringTorque > 0 and self.lane_change_direction == LaneChangeDirection.left) or
       #                   (sm['carState'].steeringTorque < 0 and self.lane_change_direction == LaneChangeDirection.right))
       # torque_applied = ((sm['carState'].steeringTorque >= 0 and self.lane_change_direction == LaneChangeDirection.left) or

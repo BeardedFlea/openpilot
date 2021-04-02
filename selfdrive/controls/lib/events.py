@@ -503,19 +503,19 @@ EVENTS: Dict[int, Dict[str, Union[Alert, Callable[[Any, messaging.SubMaster, boo
   },
 
   EventName.pedalPressed: {
-    ET.PERMANENT: Alert(
-      "Don't Worry About It..",
-      "",
-      AlertStatus.userPrompt, AlertSize.small,
-      Priority.LOWEST, VisualAlert.none, AudibleAlert.none, 0., 0., .2),
-    ET.PERMANENT: Alert(
-      "Don't Worry About It..",
-      "",
-      AlertStatus.userPrompt, AlertSize.small,
-      Priority.LOWEST, VisualAlert.none, AudibleAlert.none, 0., 0., .2),
-    # ET.USER_DISABLE: EngagementAlert(AudibleAlert.chimeDisengage),
-    # ET.NO_ENTRY: NoEntryAlert("Pedal Pressed During Attempt",
-    #                           visual_alert=VisualAlert.brakePressed),
+    # ET.PERMANENT: Alert(
+    #   "Don't Worry About It..",
+    #   "",
+    #   AlertStatus.userPrompt, AlertSize.small,
+    #   Priority.LOWEST, VisualAlert.none, AudibleAlert.none, 0., 0., .2),
+    # ET.PERMANENT: Alert(
+    #   "Don't Worry About It..",
+    #   "",
+    #   AlertStatus.userPrompt, AlertSize.small,
+    #   Priority.LOWEST, VisualAlert.none, AudibleAlert.none, 0., 0., .2),
+    ET.USER_DISABLE: EngagementAlert(AudibleAlert.chimeDisengage),
+    ET.NO_ENTRY: NoEntryAlert("Pedal Pressed During Attempt",
+                              visual_alert=VisualAlert.brakePressed),
   },
 
   EventName.wrongCarMode: {
