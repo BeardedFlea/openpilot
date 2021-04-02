@@ -2,7 +2,8 @@
 from common.numpy_fast import clip
 
 # kg of standard extra cargo to count for drive, gas, etc...
-STD_CARGO_KG = 136.
+# STD_CARGO_KG = 136.
+STD_CARGO_KG = 75.
 
 
 def gen_empty_fingerprint():
