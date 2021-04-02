@@ -44,7 +44,7 @@ What is openpilot?
 Integration with Stock Features
 ------
 
-TESTIn all supported cars:
+In all supported cars:
 * Stock Lane Keep Assist (LKA) and stock ALC are replaced by openpilot ALC, which only functions when openpilot is engaged by the user.
 * Stock LDW is replaced by openpilot LDW.
 
