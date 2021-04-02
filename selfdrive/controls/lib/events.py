@@ -503,9 +503,14 @@ EVENTS: Dict[int, Dict[str, Union[Alert, Callable[[Any, messaging.SubMaster, boo
   },
 
   EventName.pedalPressed: {
-    ET.USER_DISABLE: EngagementAlert(AudibleAlert.chimeDisengage),
-    ET.NO_ENTRY: NoEntryAlert("Pedal Pressed During Attempt",
-                              visual_alert=VisualAlert.brakePressed),
+    ET.PERMANENT: Alert(
+      "Don't Worry About It..",
+      "",
+      AlertStatus.userPrompt, AlertSize.small,
+      Priority.LOWEST, VisualAlert.none, AudibleAlert.none, 0., 0., .2),
+    # ET.USER_DISABLE: EngagementAlert(AudibleAlert.chimeDisengage),
+    # ET.NO_ENTRY: NoEntryAlert("Pedal Pressed During Attempt",
+    #                           visual_alert=VisualAlert.brakePressed),
   },
 
   EventName.wrongCarMode: {
@@ -592,13 +597,23 @@ EVENTS: Dict[int, Dict[str, Union[Alert, Callable[[Any, messaging.SubMaster, boo
   },
 
   EventName.doorOpen: {
-    ET.SOFT_DISABLE: SoftDisableAlert("Door Open"),
-    ET.NO_ENTRY: NoEntryAlert("Door Open"),
+    ET.PERMANENT: Alert(
+      "Don't Worry About It..",
+      "",
+      AlertStatus.userPrompt, AlertSize.small,
+      Priority.LOWEST, VisualAlert.none, AudibleAlert.none, 0., 0., .2),
+    # ET.SOFT_DISABLE: SoftDisableAlert("Door Open"),
+    # ET.NO_ENTRY: NoEntryAlert("Door Open"),
   },
 
   EventName.seatbeltNotLatched: {
-    ET.SOFT_DISABLE: SoftDisableAlert("Seatbelt Unlatched"),
-    ET.NO_ENTRY: NoEntryAlert("Seatbelt Unlatched"),
+    ET.PERMANENT: Alert(
+      "Don't Worry About It..",
+      "",
+      AlertStatus.userPrompt, AlertSize.small,
+      Priority.LOWEST, VisualAlert.none, AudibleAlert.none, 0., 0., .2),
+    # ET.SOFT_DISABLE: SoftDisableAlert("Seatbelt Unlatched"),
+    # ET.NO_ENTRY: NoEntryAlert("Seatbelt Unlatched"),
   },
 
   EventName.espDisabled: {

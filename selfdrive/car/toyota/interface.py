@@ -25,7 +25,8 @@ class CarInterface(CarInterfaceBase):
     ret.steerLimitTimer = 0.4
 
     # Improved longitudinal tune
-    if candidate in [CAR.COROLLA_TSS2, CAR.COROLLAH_TSS2, CAR.RAV4_TSS2, CAR.RAV4H_TSS2]:
+    # if candidate in [CAR.COROLLA_TSS2, CAR.COROLLAH_TSS2, CAR.RAV4_TSS2, CAR.RAV4H_TSS2]:
+    if candidate in [CAR.CAMRY_TSS2, CAR.COROLLAH_TSS2, CAR.RAV4_TSS2, CAR.RAV4H_TSS2]:
       ret.longitudinalTuning.deadzoneBP = [0., 8.05]
       ret.longitudinalTuning.deadzoneV = [.0, .14]
       ret.longitudinalTuning.kpBP = [0., 5., 20.]
@@ -152,8 +153,8 @@ class CarInterface(CarInterfaceBase):
       ret.wheelbase = 2.82448
       ret.steerRatio = 13.7
       tire_stiffness_factor = 0.7933
-      # ret.mass = 3400. * CV.LB_TO_KG + STD_CARGO_KG  # mean between normal and hybrid
-      ret.mass = 1700.  # Me + gas + stuff in car + 2021 Camry XLE V6 (in kg)
+      ret.mass = 3400. * CV.LB_TO_KG + STD_CARGO_KG  # mean between normal and hybrid
+      # ret.mass = 1700.  # Me + gas + stuff in car + 2021 Camry XLE V6 (in kg)
       ret.lateralTuning.pid.kpV, ret.lateralTuning.pid.kiV = [[0.6], [0.1]]
       ret.lateralTuning.pid.kf = 0.00006
 
